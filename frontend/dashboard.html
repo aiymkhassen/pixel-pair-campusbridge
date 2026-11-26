@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Campus Bridge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+
+  <!-- ================= Top header ================= -->
+  <header class="dashboard-header">
+    <!-- Mobile only: opens the sidebar drawer and shows the logo mark -->
+    <div class="dashboard-header__left">
+      <button type="button" class="dashboard-icon-button" data-sidebar-toggle aria-controls="dashboard-sidebar" aria-expanded="false" aria-label="Open sidebar">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg>
+      </button>
+      <a href="dashboard.html" class="dashboard-logo" aria-label="SDU University, dashboard">
+        <img src="assets/sdu_logo.webp" alt="" width="32" height="39">
+      </a>
+    </div>
+
+    <div class="dashboard-notifications">
+      <button type="button" class="dashboard-icon-button" data-notification-toggle aria-expanded="false" aria-controls="notification-panel" aria-label="Notifications, 3 new">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/></svg>
+        <span class="dashboard-notifications__badge" data-notification-badge aria-hidden="true">3</span>
+      </button>
+
+      <!-- Sample notifications (frontend only, not connected to the backend) -->
+      <div class="dashboard-notifications__panel" id="notification-panel" data-notification-panel hidden>
+        <h2 class="dashboard-notifications__title">Notifications</h2>
+        <ul class="dashboard-notifications__list">
+          <li class="dashboard-notifications__item">
+            <strong>Welcome to Campus Bridge!</strong>
+            <span>Your account is ready.</span>
+          </li>
+          <li class="dashboard-notifications__item">
+            <strong>Complete your profile</strong>
+            <span>Add your interests to meet students like you.</span>
+          </li>
+          <li class="dashboard-notifications__item">
+            <strong>More features are coming soon</strong>
+            <span>We are still building Campus Bridge.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dark layer behind the sidebar on mobile -->
+  <div class="dashboard-backdrop" data-sidebar-backdrop></div>
+
+  <!-- ================= Left sidebar ================= -->
+  <aside class="dashboard-sidebar" id="dashboard-sidebar">
+    <div class="dashboard-sidebar__top">
+      <a href="dashboard.html" class="dashboard-logo" aria-label="SDU University, dashboard">
+        <img src="assets/sdu_logo.webp" alt="" width="32" height="39">
+        <span class="dashboard-logo__text">SDU <span class="dashboard-logo__accent">University</span></span>
+      </a>
+      <button type="button" class="dashboard-icon-button dashboard-icon-button--small" data-sidebar-toggle aria-controls="dashboard-sidebar" aria-expanded="true" aria-label="Collapse sidebar">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg>
+      </button>
+    </div>
+
+    <div class="dashboard-sidebar__body">
+    <nav aria-label="Main navigation">
+      <ul class="dashboard-sidebar__list">
+        <li>
+          <a href="dashboard.html" class="dashboard-sidebar__link is-active" aria-current="page" title="Home">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+            <span class="dashboard-sidebar__label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#community" class="dashboard-sidebar__link" title="Community">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.2c2.7.2 4.5 2 4.5 4.8"/></svg>
+            <span class="dashboard-sidebar__label">Community</span>
+          </a>
+        </li>
+        <li>
+          <a href="#campus-tour" class="dashboard-sidebar__link" title="Campus Tour">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>
+            <span class="dashboard-sidebar__label">Campus Tour</span>
+          </a>
+        </li>
+        <li>
+          <a href="#events-guide" class="dashboard-sidebar__link" title="Events Guide">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>
+            <span class="dashboard-sidebar__label">Events Guide</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="dashboard-sidebar__link" title="About">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.8v.2"/></svg>
+            <span class="dashboard-sidebar__label">About</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="dashboard-sidebar__heading">Profile</p>
+
+    <ul class="dashboard-sidebar__list">
+      <li>
+        <a href="#profile" class="dashboard-sidebar__link" title="My Profile">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20.5c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+          <span class="dashboard-sidebar__label">My Profile</span>
+        </a>
+      </li>
+    </ul>
+    </div>
+  </aside>
+
+  <main class="dashboard-main">
+    <h1 class="dashboard-visually-hidden">Student Dashboard</h1>
+    <section class="event-carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Campus events">
+      <div class="event-carousel__stage">
+      <ul class="event-carousel__track">
+        <li class="event-carousel__slide is-active" data-carousel-slide>
+          <img src="assets/sdu_photos/sdu_dashPhoto1.jpg" alt="SDU University event, photo 1">
+        </li>
+        <li class="event-carousel__slide" data-carousel-slide aria-hidden="true">
+          <img src="assets/sdu_photos/sdu_dashPhoto2.jpg" alt="SDU University event, photo 2">
+        </li>
+        <li class="event-carousel__slide" data-carousel-slide aria-hidden="true">
+          <img src="assets/sdu_photos/sdu_dashPhoto3.jpg" alt="SDU University event, photo 3">
+        </li>
+        <li class="event-carousel__slide" data-carousel-slide aria-hidden="true">
+          <img src="assets/sdu_photos/sdu_dashPhoto4.avif" alt="SDU University event, photo 4">
+        </li>
+        <li class="event-carousel__slide" data-carousel-slide aria-hidden="true">
+          <img src="assets/sdu_photos/sdu_dashPhoto5.avif" alt="SDU University event, photo 5">
+        </li>
+      </ul>
+
+      <button type="button" class="event-carousel__arrow event-carousel__arrow--prev" data-carousel-prev aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+      </button>
+      <button type="button" class="event-carousel__arrow event-carousel__arrow--next" data-carousel-next aria-label="Next photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+
+      </div>
+
+      <div class="event-carousel__dots" data-carousel-dots></div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

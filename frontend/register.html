@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account | Campus Bridge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-background" aria-hidden="true">
+    <div class="auth-background__row"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row auth-background__row--reverse"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row auth-background__row--reverse"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row auth-background__row--reverse"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+    <div class="auth-background__row auth-background__row--reverse"><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span><span>CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE CAMPUS BRIDGE </span></div>
+  </div>
+
+  <main class="auth-main">
+    <section class="auth-card auth-card--wide" aria-labelledby="auth-title">
+      <a href="index.html" class="auth-card__logo" aria-label="Campus Bridge, home">
+        <img src="assets/sdu_logo.webp" alt="" width="32" height="39">
+      </a>
+
+      <h1 id="auth-title" class="auth-card__title">Join the Campus Bridge community!</h1>
+      <p class="auth-card__subtitle">Create your account and start connecting with students at SDU.</p>
+
+      <form id="register-form" class="auth-form" data-auth-form novalidate>
+        <div class="auth-field">
+          <label for="student-id">Student ID</label>
+          <input type="text" id="student-id" name="student_id" placeholder="Enter your student ID" autocomplete="username" inputmode="numeric" required>
+        </div>
+
+        <div class="auth-field">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+        </div>
+
+        <div class="auth-field">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+        </div>
+
+        <div class="auth-field">
+          <label for="password">Password</label>
+          <div class="auth-password">
+            <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password" required>
+            <button type="button" class="auth-password__toggle" data-toggle-password aria-controls="password" aria-label="Show password" aria-pressed="false">
+              <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.9 17.9A10.4 10.4 0 0 1 12 19C5.6 19 2 12 2 12a18.6 18.6 0 0 1 4.1-5.1M9.9 5.2A9.7 9.7 0 0 1 12 5c6.4 0 10 7 10 7a18.5 18.5 0 0 1-2.2 3.2M1 1l22 22M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label for="confirm-password">Confirm Password</label>
+          <div class="auth-password">
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" autocomplete="new-password" required>
+            <button type="button" class="auth-password__toggle" data-toggle-password aria-controls="confirm-password" aria-label="Show password" aria-pressed="false">
+              <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.9 17.9A10.4 10.4 0 0 1 12 19C5.6 19 2 12 2 12a18.6 18.6 0 0 1 4.1-5.1M9.9 5.2A9.7 9.7 0 0 1 12 5c6.4 0 10 7 10 7a18.5 18.5 0 0 1-2.2 3.2M1 1l22 22M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+            </button>
+          </div>
+        </div>
+
+
+        <div class="auth-row">
+            <div class="auth-field">
+            <label for="role">Your Role</label>
+            <select name="role" id="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="1">Admin</option>
+                <option value="2">Buddy</option>
+                <option value="3">Student</option>
+            </select>
+            </div>
+        </div>
+        
+        <p id="form-message" class="auth-message" role="alert" hidden></p>
+
+        <button type="submit" class="auth-button">Create Account</button>
+      </form>
+
+      <p class="auth-card__footer">Already have an account? <a href="login.html">Log in</a></p>
+    </section>
+  </main>
+
+  <script src="js/auth-ui.js"></script>
+</body>
+</html>
